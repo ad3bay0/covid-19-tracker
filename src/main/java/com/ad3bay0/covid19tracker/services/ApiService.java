@@ -41,8 +41,6 @@ public class ApiService {
                 record.get("Province_State"), 
                 record.get("Country_Region"), 
                 Integer.parseInt(record.get("Confirmed")));
-
-                log.info(locationStat.toString());
                 newStats.add(locationStat);
         }
 
@@ -50,5 +48,11 @@ public class ApiService {
         
 
     }
+
+
+    public List<LocationStats> getAllStats() {
+        return this.allStats;
+    }
+
 
 }
